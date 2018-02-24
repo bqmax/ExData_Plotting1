@@ -20,6 +20,6 @@ df$DateTime <- paste(df$Date, df$Time)
 df$DateTime <- strptime(df$DateTime, "%d/%m/%Y %H:%M:%S")
 
 ## plot2
-png(filename = "plot2.png", width = 480, height = 480, units = "px")
+png(filename = "plot2.png", width = 480, height = 480, units = "px", bg = "transparent")
 plot(df$DateTime, df$Global_active_power, type = "l", xlab = "", ylab = "Global Active Power (kilowatts)")
 dev.off()

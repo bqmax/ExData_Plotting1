@@ -20,7 +20,7 @@ df$DateTime <- paste(df$Date, df$Time)
 df$DateTime <- strptime(df$DateTime, "%d/%m/%Y %H:%M:%S")
 
 ## plot3
-png(filename = "plot3.png", width = 480, height = 480, units = "px")
+png(filename = "plot3.png", width = 480, height = 480, units = "px", bg = "transparent")
 plot(df$DateTime, df$Sub_metering_1, type = "n",xlab = "", ylab = "Energy sub metering")
 lines(df$DateTime, df$Sub_metering_1, type = "l", col = "darkgrey")
 lines(df$DateTime, df$Sub_metering_2, type = "l", col = "red")

@@ -20,7 +20,7 @@ df$DateTime <- paste(df$Date, df$Time)
 df$DateTime <- strptime(df$DateTime, "%d/%m/%Y %H:%M:%S")
 
 ## plot4
-png(filename = "plot4.png", width = 480, height = 480, units = "px")
+png(filename = "plot4.png", width = 480, height = 480, units = "px", bg = "transparent")
 par(mfrow = c(2, 2), mar = c(4,4,1,1), oma = c(1,1,0,0))
 plot(df$DateTime, df$Global_active_power, type = "l", xlab = "", ylab = "Global Active Power (kilowatts)")
 plot(df$DateTime, df$Voltage, type = "l", xlab = "datetime", ylab = "Voltage")
